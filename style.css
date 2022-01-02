@@ -1,6 +1,6 @@
 
    
-.todo-task{
+.todo-task {
     color:red;
 }
 
@@ -13,13 +13,14 @@
   display:none;
 }
 
-.cancel-button{
+.cancel-button {
   display: none;
 }
 
 .error-message{
-  background: red;
-  color: white;
   display: none;
-  width: 180px;
+  width: 600px;
+  margin: 25px;
+  padding-left: 4rem;
+
 }

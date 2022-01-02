@@ -62,11 +62,11 @@ $(function () {
   
         var error = null;
         if(!createInputValue){
-          error = 'Task input cannot be empty.';
+          error = 'Please provide a task to add!';
         } else {
           todos.forEach(function(todo){
             if(todo.task === createInputValue){
-              error = 'Task already exists.';
+              error = 'Task already added';
             }
           });
         }
@@ -159,7 +159,6 @@ $(function () {
     });
   
     app.showTodos();
-  //  $('.todo-task').on('click',app.toggleTodo);
     $('table').on('click','.todo-task',app.toggleTodo);
     $('#create-form').on('submit',app.addTodo);
     $('#create-input').on('keyup',app.clearError);
