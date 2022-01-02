@@ -54,13 +54,13 @@ $(function () {
       },
   
       addTodo: function(event) {
-        //prevent the page from refreshing
+        // prevent the page from refreshing
         event.preventDefault();
   
-        var createInput = $('#create-input');
-        var createInputValue = createInput.val();
-  
-        var error = null;
+        let createInput = $('#create-input');
+        let createInputValue = createInput.val();
+        let error = null;
+
         if(!createInputValue){
           error = 'Please provide a task to add!';
         } else {
@@ -75,14 +75,18 @@ $(function () {
           return;
         }
   
+        // Add input in the todos array
         todos.push({
-          task:createInputValue,
-          isCompleted:false
+          task: createInputValue,
+          isCompleted: false
         });
+
+        // Reset input
         createInput.val('');
         app.showTodos();
       },
   
+
       toggleTodo: function() {
         todos.forEach(function(todo) {
           if(todo.task === $(this).text()){
@@ -92,10 +96,12 @@ $(function () {
         app.showTodos();
       },
   
+      // Edit task 
       enterEditMode: function() {
         var actionCell = $(this).closest('td');
         var taskCell = actionCell.prev();
   
+        // HIDE delete and edit, SHOW save and cancel
         actionCell.find('.save-button').show();
         actionCell.find('.cancel-button').show();
         actionCell.find('.edit-button').hide();
