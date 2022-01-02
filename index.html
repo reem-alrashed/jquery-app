@@ -17,6 +17,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Sunday Jan 2, 2022</h5>
                     <p class="card-text">Organize your day..</p>
+                    <div class="clock"></div>
                     <div class="form-group">
                       <form id="create-form">
                           <div class="form-row">
@@ -66,6 +67,14 @@
     const d = new Date();
     let day = weekday[d.getDay()];
      $('.card-title').text(d.toDateString());
+
+     window.onload = displayClock();
+
+     function displayClock(){
+      let display = new Date().toLocaleTimeString();
+      $('.clock').text(display);
+      setTimeout(displayClock, 1000); 
+    }
    </script>
     </body>
 </html>

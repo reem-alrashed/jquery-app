@@ -22,5 +22,7 @@
   width: 600px;
   margin: 25px;
   padding-left: 4rem;
-
+}
+.clock {
+  padding-bottom: 20px;
 }
