@@ -1,0 +1,25 @@
+
+   
+.todo-task{
+    color:red;
+}
+
+.is-completed {
+  color:green;
+  text-decoration: line-through;
+}
+
+.save-button {
+  display:none;
+}
+
+.cancel-button{
+  display: none;
+}
+
+.error-message{
+  background: red;
+  color: white;
+  display: none;
+  width: 180px;
+}
