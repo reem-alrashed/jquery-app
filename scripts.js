@@ -1,5 +1,5 @@
 $(function () {
-    var todos = [
+    let todos = [
       {
         task : 'Learn jQuery',
         isCompleted: false
@@ -10,13 +10,13 @@ $(function () {
       }
   
     ];
-    var app = {
+    let app = {
       showTodos: () => {
-        var todosListEl = $('#todos-list');
+        let todosListEl = $('#todos-list');
   
         todosListEl.html('');
         todos.forEach((todo) => {
-          var taskClasses = 'todo-task' + (todo.isCompleted ? ' is-completed':'');
+          let taskClasses = 'todo-task' + (todo.isCompleted ? ' is-completed':'');
   
           todosListEl.append(`
             <tr>
@@ -98,8 +98,8 @@ $(function () {
   
       // Edit task 
       enterEditMode: function() {
-        var actionCell = $(this).closest('td');
-        var taskCell = actionCell.prev();
+        let actionCell = $(this).closest('td');
+        let taskCell = actionCell.prev();
   
         // HIDE delete and edit, SHOW save and cancel
         actionCell.find('.save-button').show();
@@ -113,8 +113,8 @@ $(function () {
       },
   
       exitEditMode: function() {
-        var actionCell = $(this).closest('td');
-        var taskCell = actionCell.prev();
+        let actionCell = $(this).closest('td');
+        let taskCell = actionCell.prev();
   
         actionCell.find('.save-button').hide();
         actionCell.find('.cancel-button').hide();
@@ -126,7 +126,7 @@ $(function () {
       },
   
       saveTask: function() {
-        var newTask = $('.edit-input').val();
+        let newTask = $('.edit-input').val();
   
         todos.forEach(function(todo) {
           if(app.currentTask === todo.task){
@@ -138,8 +138,8 @@ $(function () {
       },
   
       deleteTask : function() {
-        var taskToDelete = $(this).parent('td').prev().text();
-        var found=false;
+        let taskToDelete = $(this).parent('td').prev().text();
+        let found=false;
         todos.forEach(function(todo,index){
           if(!found && taskToDelete === todo.task){
             todos.splice(index,1);
