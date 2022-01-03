@@ -3,37 +3,37 @@ body {
   left: 0;
   width: 100%;
   height: auto;
-  max-height: 340px; 
+  max-height: 21.25rem; 
   overflow-y: auto; 
 }
 
 @media (max-device-width: 480px) {
   body, h5 {
     font-size: 3rem !important;
-    width: 1000px;
+    width: 62.5rem;
     justify-content: center;
     align-items: center;
     padding: 2rem;
   }
   button, input {
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.24rem;
     font-size: 2.5rem;
   }
   svg {
-    width: 75px;
-    height: 70px;
+    width: 4.688rem;
+    height: 4.375rem;
     font-size: 2rem;
   }
 
  .form-control {
-    height: 100px !important;
-    width: 600px !important;
+    height: 6.25rem !important;
+    width: 37.5rem !important;
   }
   input {
-    height: 100px !important;
-    width: 600px !important;
-    border-radius: 8px;
+    height: 6.25rem !important;
+    width: 37.5rem !important;
+    border-radius: 0.5rem;
   }
   td button{
     margin: 0.4rem !important;
@@ -43,8 +43,6 @@ body {
     vertical-align: middle !important;
   }
 }
-
-
    
 .todo-task {
     color:red;
@@ -66,10 +64,6 @@ body {
 .error-message{
   display: none;
   width: 35rem;
-  margin: 25px;
+  margin: 1.563rem;
   padding-left: 4rem;
 }
-.clock {
-  padding-bottom: 20px;
-}
-
