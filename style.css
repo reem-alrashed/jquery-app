@@ -1,3 +1,49 @@
+body {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  max-height: 340px; 
+  overflow-y: auto; 
+}
+
+@media (max-device-width: 480px) {
+  body, h5 {
+    font-size: 3rem !important;
+    width: 1000px;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  button, input {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
+  }
+  svg {
+    width: 75px;
+    height: 70px;
+    font-size: 2rem;
+  }
+
+ .form-control {
+    height: 100px !important;
+    width: 600px !important;
+  }
+  input {
+    height: 100px !important;
+    width: 600px !important;
+    border-radius: 8px;
+  }
+  td button{
+    margin: 0.4rem !important;
+
+  }
+ .todo-task {
+    vertical-align: middle !important;
+  }
+}
+
 
    
 .todo-task {
@@ -19,10 +65,11 @@
 
 .error-message{
   display: none;
-  width: 600px;
+  width: 35rem;
   margin: 25px;
   padding-left: 4rem;
 }
 .clock {
   padding-bottom: 20px;
 }
+

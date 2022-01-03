@@ -13,7 +13,6 @@ $(function () {
     let app = {
       showTodos: () => {
         let todosListEl = $('#todos-list');
-  
         todosListEl.html('');
         todos.forEach((todo) => {
           let taskClasses = 'todo-task' + (todo.isCompleted ? ' is-completed':'');
@@ -56,7 +55,7 @@ $(function () {
       addTodo: function(event) {
         // prevent the page from refreshing
         event.preventDefault();
-  
+
         let createInput = $('#create-input');
         let createInputValue = createInput.val();
         let error = null;
@@ -136,6 +135,13 @@ $(function () {
         app.currentTask = newTask;
         app.exitEditMode.call(this);
       },
+
+      getDate : function() {
+        const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        const d = new Date();
+        let day = weekday[d.getDay()];
+         $('.card-title').text(d.toDateString());
+      },
   
       deleteTask : function() {
         let taskToDelete = $(this).parent('td').prev().text();
@@ -158,9 +164,9 @@ $(function () {
       }
     };
   
-    $('#create-form button').css('background','blue');
-    $('#create-form button').css({
-      color:'yellow',
+    $('#create-form button').css('background','gray');
+    $('button').css({
+      color:'white',
       borderRadius: '8px'
     });
   
