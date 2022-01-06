@@ -5,6 +5,7 @@ body {
   height: auto;
   max-height: 21.25rem; 
   overflow-y: auto; 
+  padding: 2rem;
 }
 
 @media (max-device-width: 480px) {
@@ -42,6 +43,9 @@ body {
  .todo-task {
     vertical-align: middle !important;
   }
+  p {
+    margin: 2.5rem 1rem 2.5rem 1rem;
+  }
 }
    
 .todo-task {
@@ -63,7 +67,7 @@ body {
 
 .error-message{
   display: none;
-  width: 35rem;
+  width: 40rem;
   margin: 1.563rem;
   padding-left: 4rem;
 }
