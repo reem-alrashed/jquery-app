@@ -51,6 +51,10 @@ body {
   .time-input {
     width: 16.25rem;
   }
+  .card-body, .card-text {
+    margin-bottom: 4.5rem;
+  }
+  
 }
    
 .todo-task {
@@ -86,3 +90,4 @@ border: none;
 .btn-secondary {
 background-color: gray;
 }
+
