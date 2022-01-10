@@ -5,40 +5,11 @@ $(document).ready(function() {
     // check the availability of jquery
     console.log('jquery is working!');
     fetchTasks();
-    // hide search results by default
-    $('#task-result').hide();
-  
-  
-    
-    $('#search').keyup(function() {
-      if($('#search').val()) {
-        let search = $('#search').val();
-        $.ajax({
-          url: 'task-search.php',
-          data: {search},
-          type: 'POST',
-          success: function (response) {
-            if(!response.error) {
-              let tasks = JSON.parse(response);
-              let template = '';
-              tasks.forEach(task => {
-                template += `
-                       <li><a href="#" class="task-item">${task.name}</a></li>
-                      ` 
-              });
-              $('#task-result').show();
-              $('#container').html(template);
-            }
-          } 
-        })
-      }
-    });
   
     $('#task-form').submit(e => {
       e.preventDefault();
       const postData = {
         name: $('#name').val(),
-        description: $('#description').val(),
         id: $('#taskId').val()
       };
       const url = edit === false ? 'task-add.php' : 'task-edit.php';
@@ -67,7 +38,6 @@ $(document).ready(function() {
                       ${task.name} 
                     </a>
                     </td>
-                    <td>${task.description}</td>
                     <td>
                       <button class="task-delete btn btn-danger">
                        Delete 
@@ -87,7 +57,6 @@ $(document).ready(function() {
       $.post('task-single.php', {id}, (response) => {
         const task = JSON.parse(response);
         $('#name').val(task.name);
-        $('#description').val(task.description);
         $('#taskId').val(task.id);
         edit = true;
       });
