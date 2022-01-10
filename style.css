@@ -32,7 +32,7 @@ body {
     height: 6.25rem !important;
     width: 37.5rem !important;
   }
-  input {
+  input [type="text"]{
     height: 6.25rem !important;
     width: 37.5rem !important;
     border-radius: 0.5rem;
@@ -46,6 +46,10 @@ body {
   }
   p {
     margin: 2.5rem 1rem 2.5rem 1rem;
+  }
+
+  .time-input {
+    width: 16.25rem;
   }
 }
    
