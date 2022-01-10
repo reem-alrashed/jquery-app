@@ -72,3 +72,13 @@ body {
   margin: 1.563rem;
   padding-left: 4rem;
 }
+.time-input {
+background-color: gray;
+border-radius: 0.4rem;
+padding: 0.4rem;
+border: none;
+}
+
+.btn-secondary {
+background-color: gray;
+}

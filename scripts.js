@@ -20,6 +20,7 @@ $(function () {
           todosListEl.append(`
             <tr>
               <td class="${taskClasses}">${todo.task}</td>
+              <td> <input class="time-input" type="time"/></td>
               <td>
                 <button type="button" class="btn btn-secondary edit-button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
